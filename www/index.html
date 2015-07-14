@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" href="css/jquery.mobile-1.1.2.min.css"/>
+        <link rel="stylesheet" href="css/mystyle.css"/>
+        <script src="js/jquery.js"></script>
+        <script src="js/jquery.mobile-1.1.2.min.js"></script>
+    </head>
+    <body>
+        <div data-role="page" id="main">
+            <div data-role="header" data-theme="b" data-position="fixed">
+                <a href="" id='refreshBtn' data-icon="refresh">Refresh</a>
+                <h1>Employee Apps</h1>
+                <a href="#addPage" id='addBtn' data-icon="plus" data-transition="slide">Add</a>
+            </div>
+            <div data-role="content">
+                <ul id="employeeList" data-role="listview" data-filter="true">
+                </ul>
+            </div>
+        </div>
+
+        <div data-role="page" id="addPage" data-add-back-btn="true">
+            <div data-role="header" data-theme="b" data-position="fixed">
+                <h1>New Employee</h1>
+                 <a href="" id='saveBtn' data-icon="check" class="ui-btn-right">Save</a>
+            </div>
+            <div data-role="content">
+               <label for="basic">Nama:</label>
+               <input type="text" id="nama" value="" />
+                <label for="basic">Jabatan:</label>
+               <input type="text" id="jabatan" value="" />
+                <label for="basic">Alamat:</label>
+               <textarea name="textarea" id="alamat"></textarea>
+                <label for="basic">Email:</label>
+               <input type="email" id="email" value="" />
+                <label for="basic">Telp:</label>
+               <input type="text" id="telp" value="" />
+                <label for="basic">Image:</label>
+               <input type="text" id="img" value="" />
+            </div>
+        </div>
+
+        <div data-role="dialog" id="savedDialog">
+            <div data-role="header" data-theme="b">
+                <h2>Information</h2>
+            </div>
+            <div data-role="content">
+                <p>Employee Saved!</p>
+            </div>
+        </div>
+
+
+
+        <!--<script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>-->
+        <script src="js/myscript.js" type="text/javascript"></script>
+    </body>
+</html>
